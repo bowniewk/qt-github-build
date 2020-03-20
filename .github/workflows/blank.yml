@@ -4,13 +4,13 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: Install Qt
       uses: jurplel/install-qt-action@v2.5.3
       with:
         # Directory to install Qt
-        #dir: # optional
+        dir: d:/a/qt-github-build/qt5 # optional
         # Version of Qt to install
         #version: 5.11.3 # optional, default is 5.12.7
         # Host platform
