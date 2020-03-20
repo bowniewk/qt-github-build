@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
-      with:
+      #with:
         # Directory to install Qt
         #dir: # optional
         # Version of Qt to install
