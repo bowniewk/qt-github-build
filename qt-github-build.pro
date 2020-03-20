@@ -26,7 +26,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
     
-LIBS += D:/a/qt-github-build/qt5/Qt/5.12.7/msvc2017_64/lib/libQt5Widgets.a
+LIBS += $${QT5_DIR}/lib/libQt5Widgets.a
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
