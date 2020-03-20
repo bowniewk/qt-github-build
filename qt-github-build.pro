@@ -2,7 +2,7 @@ QT       += core gui widgets
 
 #greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += qt embed_manifest_exe shared
+CONFIG += c++11 qt embed_manifest_exe shared
 #c++11
 
 # The following define makes your compiler emit warnings if you use
@@ -25,6 +25,8 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui
+    
+LIBS += D:/a/qt-github-build/qt5/Qt/5.12.7/msvc2017_64/lib/libQt5Widgets.a
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
