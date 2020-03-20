@@ -21,7 +21,7 @@ jobs:
         #arch: win32_mingw53 # optional
         # Whether or not to install Qt dependencies on Linux
         #install-deps: true # optional, default is true
-        modules: core gui xml network widgets printsupport
+        modules: "qtgui qtxml qtnetwork qtwidgets qtprintsupport"
 
     - uses: actions/checkout@v1
 
