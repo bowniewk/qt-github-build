@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Install Qt
       uses: jurplel/install-qt-action@v2.5.3
-      #with:
+      with:
         # Directory to install Qt
         #dir: # optional
         # Version of Qt to install
@@ -21,7 +21,7 @@ jobs:
         #arch: win32_mingw53 # optional
         # Whether or not to install Qt dependencies on Linux
         #install-deps: true # optional, default is true
-        #modules: core gui xml network widgets printsupport
+        modules: core gui xml network widgets printsupport
 
     - uses: actions/checkout@v1
 
