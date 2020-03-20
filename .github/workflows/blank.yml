@@ -8,17 +8,17 @@ jobs:
     steps:
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
-      #with:
+      with:
         # Directory to install Qt
         #dir: # optional
         # Version of Qt to install
-        #version: 5.12.7 # optional, default is 5.12.7
+        version: 5.11.3 # optional, default is 5.12.7
         # Host platform
         #host: windows # optional
         # Target platform for build
         #target: desktop # optional, default is desktop
         # Architecture for Windows/Android
-        #arch: win32_mingw73 # optional
+        arch: win32_mingw73 # optional
         # Whether or not to install Qt dependencies on Linux
         #install-deps: true # optional, default is true
         #modules: core gui xml network widgets printsupport
