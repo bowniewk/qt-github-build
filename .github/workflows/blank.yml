@@ -24,7 +24,10 @@ jobs:
         #modules: "qtgui qtxml qtnetwork qtwidgets qtprintsupport"
 
     - name: Environment Variables
-      run: echo "Qt5_DIR = %Qt5_DIR%"
+      run: |
+        set
+        echo %Qt5_DIR%
+        
       
     - uses: actions/checkout@v1
 
