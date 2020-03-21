@@ -26,7 +26,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
     
-LIBS += $${Qt5_DIR}/lib/libQt5Widgets.a
+#LIBS += $${Qt5_DIR}/lib/libQt5Widgets.a
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
