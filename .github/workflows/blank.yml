@@ -23,11 +23,8 @@ jobs:
         #install-deps: true # optional, default is true
         #modules: "qtgui qtxml qtnetwork qtwidgets qtprintsupport"
 
-    - name: Environment Variables
-      run: |
-        set
-        echo %Qt5_DIR%
-        
+    - name: Qt5_DIR environment variable
+      run: echo %Qt5_DIR%
       
     - uses: actions/checkout@v1
 
