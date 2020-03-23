@@ -10,15 +10,15 @@ jobs:
       uses: jurplel/install-qt-action@v2.5.3
       with:
         # Directory to install Qt
-        dir: d:/a/qt-github-build/qt5 # optional
+        #dir: d:/a/qt-github-build/qt5 # optional
         # Version of Qt to install
-        version: 5.11.3 # optional, default is 5.12.7
+        version: 5.12.7 # 5.11.3
         # Host platform
         #host: windows # optional
         # Target platform for build
         #target: desktop # optional, default is desktop
         # Architecture for Windows/Android
-        arch: win32_mingw53 # optional
+        arch: win32_mingw73 # optional
         # Whether or not to install Qt dependencies on Linux
         #install-deps: true # optional, default is true
         #modules: "qtgui qtxml qtnetwork qtwidgets qtprintsupport"
