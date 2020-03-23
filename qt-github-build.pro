@@ -4,6 +4,8 @@ QT       += core gui widgets
 
 CONFIG += c++11
 
+win32:QMAKE_LFLAGS += -shared
+
 #qt embed_manifest_exe shared
 #CONFIG += shared@
 #c++11
