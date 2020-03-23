@@ -2,9 +2,9 @@ QT       += core gui widgets
 
 #greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++11 qt embed_manifest_exe
 
-win32:QMAKE_LFLAGS += -shared qt embed_manifest_exe
+win32:QMAKE_LFLAGS += -shared 
 
 #qt embed_manifest_exe shared
 #CONFIG += shared@
