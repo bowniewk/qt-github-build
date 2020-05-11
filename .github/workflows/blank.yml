@@ -7,7 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2.5.3
+      uses: jurplel/install-qt-action #@v2.5.3
       with:
         # Directory to install Qt
         #dir: d:/a/qt-github-build/qt5 # optional
@@ -18,10 +18,10 @@ jobs:
         # Target platform for build
         #target: desktop # optional, default is desktop
         # Architecture for Windows/Android
-        arch: win64_mingw53 # mingw73 much slower download
+        arch: win32_mingw53 # mingw73 much slower download
         # Whether or not to install Qt dependencies on Linux
         #install-deps: true # optional, default is true
-        modules: qtwidgets widgets
+        #modules: qtwidgets widgets
 
     - name: Qt5_DIR environment variable
       run: echo %Qt5_DIR%
