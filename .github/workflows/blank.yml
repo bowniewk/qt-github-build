@@ -7,7 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Install Qt
-      uses: jurplel/install-qt-action@latest #@v2.5.3
+      uses: jurplel/install-qt-action@v2 #@v2.5.3
       with:
         # Directory to install Qt
         #dir: d:/a/qt-github-build/qt5 # optional
