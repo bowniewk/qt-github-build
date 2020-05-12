@@ -8,7 +8,9 @@ jobs:
     steps:
     
     - name: Check mingw g++ version
-      run: g++.exe --version
+      run: |
+        Write-Output (Get-Command g++.exe).Path
+        g++.exe --version
       
     - name: Install correct version of mingw
       run: |
@@ -16,7 +18,9 @@ jobs:
         choco install mingw --version=5.3.0
         
     - name: Check mingw g++ version
-      run: g++.exe --version
+      run: |
+        Write-Output (Get-Command g++.exe).Path
+        g++.exe --version
       
     - name: Install Qt
       uses: jurplel/install-qt-action@v2 #@v2.5.3
