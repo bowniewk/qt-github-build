@@ -28,7 +28,7 @@ jobs:
 
     - name: Set path and check mingw g++ version
       run: |
-        echo "::add-path::d:/a/qt-github-console/Qt/5.12.7/mingw73_32/bin"
+        echo "::add-path::d:/a/qt-github-console/Qt/5.11.3/mingw53_32/bin"
         refreshenv
         Write-Output (Get-Command g++.exe).Path
         g++.exe --version
