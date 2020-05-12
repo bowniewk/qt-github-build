@@ -16,10 +16,16 @@ jobs:
       run: |
         choco uninstall mingw --force
         choco uninstall strawberryperl --force
-        choco install mingw --version=5.3.0
+        #choco install mingw --version=5.3.0
+        #echo "::add-path::C:/tools/mingw64/bin"
+        echo "::add-path::d:/a/qt-github-console/Qt/5.12.7/mingw73_32/bin"
         refreshenv
-        echo "::add-path::C:/tools/mingw64/bin"
-        
+
+    - name: Check mingw g++ version
+      run: |
+        Write-Output (Get-Command g++.exe).Path
+        g++.exe --version
+                
     - name: Check mingw g++ version
       run: |
         Write-Output (Get-Command g++.exe).Path
