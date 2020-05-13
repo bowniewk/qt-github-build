@@ -1,40 +1,36 @@
 name: CI
 
+env:
+  QT_VERSION:     "5.12.7"
+  MINGW_VERSION:  "win64_mingw73"
+  MINGW_PATH:     "mingw73_64"
+
 on: [push]
 
 jobs:
   build:
     runs-on: windows-latest
     steps:
-    
-    - name: Check mingw g++ version
-      run: |
-        Write-Output (Get-Command g++.exe).Path
-        g++.exe --version
       
     - name: Install correct version of mingw
       run: |
         choco uninstall mingw --force
         choco uninstall strawberryperl --force
-        #choco install mingw --version=5.3.0
-        #echo "::add-path::C:/tools/mingw64/bin"
+        choco install mingw --version=7.3.0 
 
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2 #@v2.5.3
+      uses: jurplel/install-qt-action@v2.6.2
       with:
-        version: 5.11.3 # 5.12.7
-        arch: win32_mingw53 # mingw73 much slower download
+        version: ${{ env.QT_VERSION }}
+        arch: ${{ env.MINGW_VERSION }}
         extra: --external 7z
 
-    - name: Set path and check mingw g++ version
-      run: |
-        echo "::add-path::d:/a/qt-github-console/Qt/5.11.3/mingw53_32/bin"
-        refreshenv
-        Write-Output (Get-Command g++.exe).Path
-        g++.exe --version
-
-    - name: Qt5_DIR environment variable
-      run: echo %Qt5_DIR%
+    #- name: Set path and check mingw g++ version
+#      run: |
+ #       echo "::add-path::d:/a/qt-github-console/Qt/5.11.3/mingw53_32/bin"
+  #      refreshenv
+   #     Write-Output (Get-Command g++.exe).Path
+    #    g++.exe --version
       
     - uses: actions/checkout@v1
 
