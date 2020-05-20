@@ -48,5 +48,5 @@ jobs:
       working-directory: d:/a/qt-github-build/qt-github-build
       run: | 
         ls
-        ls releases 
+        ls release
 
