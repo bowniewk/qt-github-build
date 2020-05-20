@@ -44,3 +44,9 @@ jobs:
       working-directory: d:/a/qt-github-build/qt-github-build
       run: mingw32-make.exe -j8
 
+    - name: Show the build artifacts
+      working-directory: d:/a/qt-github-build/qt-github-build
+      run: | 
+        ls
+        ls releases 
+
