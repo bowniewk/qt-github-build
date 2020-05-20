@@ -50,3 +50,8 @@ jobs:
         ls
         ls release
 
+    - name: Upload EXE artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: qt-github-build.exe
+          path: release/qt-github-build.exe
